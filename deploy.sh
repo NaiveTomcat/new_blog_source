@@ -1,7 +1,7 @@
 #!/bin/bash
 yarn build
 # scp -r docs/.vuepress/dist/* root@lax.tsinghuamakerxian.cn:/var/www/blog/
-cp -r docs/.vuepress/dist/* gitpublish/
+# cp -r docs/.vuepress/dist/* gitpublish/
 cd gitpublish
 git add .
 git commit -m update
