@@ -28,6 +28,8 @@ ASN最初是一个16位长的整数，自2007年起，开始分配32位的ASN。
 
 一般来说，注册需要提供的就是whois上面的相关信息了。以APNIC为例，如果以个人注册，你需要提供你的姓名、地址、电话、以及邮箱地址，还需要提供一个abuse邮箱和技术联系邮箱，同时还需要一个AS的名字。提交之后过几天ASN就分配下来了，可以使用whois进行查询。分配给我的ASN就是`142280`，whois信息如下：
 
+::: details
+
 ```
 ╭─root@DESKTOP-OVMSE0A ~
 ╰─# whois AS142280
@@ -131,6 +133,8 @@ source:         APNIC
 
 % This query was served by the APNIC Whois Service version 1.88.15-SNAPSHOT (WHOIS-AU3)
 ```
+
+:::
 
 ## 如何接入互联网并广播自己的IP
 

@@ -56,7 +56,7 @@ module.exports = {
 
     sidebar: 'structuring', // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
-    sidebarOpen: false, // 初始状态是否打开侧边栏，默认true
+    sidebarOpen: true, // 初始状态是否打开侧边栏，默认true
     // updateBar: { // 最近更新栏
     //   showToArticle: true, // 显示到文章页底部，默认true
     //   moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
@@ -83,12 +83,28 @@ module.exports = {
           iconClass: 'icon-github',
           title: 'GitHub',
           link: 'https://github.com/NaiveTomcat'
+        },
+        {
+          iconClass: 'icon-zhihu',
+          title: '知乎',
+          link: 'https://www.zhihu.com/people/nx-01enterprise'
         }
       ]
     },
     footer:{ // 页脚信息
       createYear: 2021, // 博客创建年份
-      copyrightInfo: 'NaiveTomcat | MIT License | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a> | <a href="http://beian.miit.gov.cn/" target="_blank">陕ICP备20002453号</a>', // 博客版权信息，支持a标签
+      copyrightInfo: 'NaiveTomcat | MIT License | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a>', // 博客版权信息，支持a标签
+    },
+    htmlModules: {
+      sidebarB: `
+      <p>
+      <hr>
+      <center>
+      <h3>购买云服务器，选Vultr！</h3>
+      <h4>通过此链接注册即可获100$赠金</h4>
+      <a href="https://www.vultr.com/?ref=8470306-6G"><img src="https://www.vultr.com/media/banners/banner_160x600.png" width="160" height="600"></a>
+      </center>
+      </p>`
     }
   },
   plugins: [ // 插件
