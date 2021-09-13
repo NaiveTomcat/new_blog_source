@@ -24,7 +24,9 @@ permalink: /pages/3cbd5f/
 
 首先，您需要在您的系统上安装Docker。
 
-如果您使用Windows系统，您可以参照[Docker官方网站上的文档](https://docs.docker.com/desktop/windows/install/)进行安装。简而言之，您首先需要确保您在使用`Windows 10 2004`或更新的版本，并启用了`wsl2`功能，然后下载docker官方的安装文件执行进行安装。
+如果您使用Windows系统，您可以参照[Docker官方网站上的文档](https://docs.docker.com/desktop/windows/install/)进行安装。简而言之，您首先需要确保您在使用`Windows 10 2004`或更新的版本，并且在`程序和功能-启用或关闭Windows功能`中打开wsl的支持（`适用于Windows的Linux子系统`和`虚拟机平台`），然后在[这里](https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe)下载并安装docker客户端
+
+![wsl_enable](/img/wsl_enable.png)。
 
 如果您使用Linux系统，您可以从您的发行版软件包仓库安装或参考Docker官方文档。您还可以从[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)获取安装说明。
 
