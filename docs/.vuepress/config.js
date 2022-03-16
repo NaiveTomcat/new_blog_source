@@ -15,6 +15,8 @@ module.exports = {
                 function gtag(){dataLayer.push(arguments);}\
                 gtag('js', new Date());\
                 gtag('config', 'G-DRRYLMDHK1');"],
+    ['script', { "crossorigin": "anonymous", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true}],
+
     
     //  ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
     //  ['script', {},
