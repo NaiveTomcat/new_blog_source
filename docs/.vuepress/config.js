@@ -5,6 +5,7 @@ module.exports = {
   description: 'NaiveTomcat的博客，什么都写，Linux使用&踩坑，深度学习，后端开发，程序语言等', // 描述,以 <meta> 标签渲染到页面html中
   // base: '/vdoing-demo-blog/', // '/<github仓库名>/'， 默认'/' 
   head: [
+    ['meta', { name: 'chartset', content: 'utf-8' }],
     ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: '个人技术博客,后端,后端开发,技术文档,学习,面试,程序语言,编译器,go,c++,alolang,git,github,markdown'}],
     ['meta', { name: 'theme-color', content: '#11a8cd'}], // 移动浏览器主题颜色
