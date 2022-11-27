@@ -6,6 +6,12 @@ article: false
 
 ::: cardList
 ```yaml
+- name: Pixia的小天地
+  desc: Pixia的小天地，平时就分享一些自己的想法~
+  link: https://blogs.pixia1234.live/
+  avatar: https://blogs.pixia1234.live/images/avatar.jpg
+  bgColor: "#69D6DF"
+  textColor: "#102030"
 - name: Ayanami Rei IV
   desc: Across the sea of LCL we can reach everywhere in the world.
   link: https://blog.ayanami-official.net/
