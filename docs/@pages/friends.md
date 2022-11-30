@@ -15,6 +15,7 @@ article: false
 - name: Ayanami Rei IV
   desc: Across the sea of LCL we can reach everywhere in the world.
   link: https://blog.ayanami-official.net/
+  avatar: https://blog.ayanami-official.net/avatar.png
   bgColor: "#44eeff"
   textColor: "#102030"
 - name: NTEREN
