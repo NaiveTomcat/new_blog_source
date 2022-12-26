@@ -119,8 +119,8 @@ module.exports = {
       <hr>
       <center>
       <h3>购买云服务器，选Vultr！</h3>
-      <h4>通过此链接注册即可获100$赠金</h4>
-      <a href="https://www.vultr.com/?ref=8470306-6G"><img src="https://www.vultr.com/media/banners/banner_160x600.png" width="160" height="600"></a>
+      <h4>通过此链接注册即可获$100试用金</h4>
+      <a href="https://www.vultr.com/?ref=8963016-8H"><img src="https://www.vultr.com/media/banners/banner_160x600.png" width="160" height="600"></a>
       </center>
       </p>`
     }
