@@ -13,4 +13,4 @@ tagline: NaiveTomcat的博客。
 ---
 # 国际服务器购买，选Vultr
 
-<a href="https://www.vultr.com/?ref=8963016-8H">通过此链接注册，可获得100$的代金券<img src="https://www.vultr.com/media/banners/banner_728x90.png" width="728" height="90"></a>
+<a href="https://www.vultr.com/?ref=8963016-8H">通过此链接注册，可获得$100试用金<img src="https://www.vultr.com/media/banners/banner_728x90.png" width="728" height="90"></a>
