@@ -17,7 +17,15 @@ module.exports = {
                 gtag('js', new Date());\
                 gtag('config', 'G-DRRYLMDHK1');"],
     ['script', { "crossorigin": "anonymous", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true}],
-
+    ['script', {}, `setInterval(function () {
+      let url = "/cdn-cgi/info";
+      fetch(url)
+      .then(res => res.json())
+      .then(function (data) {
+          document.getElementById("cdninfo").innerHTML = data.node;
+      });
+  }, 1000);
+  console.log("CDN Helper Loaded");`],
     
     //  ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
     //  ['script', {},
@@ -111,7 +119,7 @@ module.exports = {
     },
     footer:{ // 页脚信息
       createYear: 2021, // 博客创建年份
-      copyrightInfo: 'NaiveTomcat | MIT License | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a>', // 博客版权信息，支持a标签
+      copyrightInfo: 'NaiveTomcat | MIT License | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a> | 命中CDN节点<span id="cdninfo"></span>', // 博客版权信息，支持a标签
     },
     htmlModules: {
       sidebarB: `
