@@ -113,7 +113,7 @@ module.exports = {
         {
           iconClass: 'icon-rss',
           title: '订阅',
-          link: '/feed.xml'
+          link: '/feed.atom'
         }
       ]
     },
