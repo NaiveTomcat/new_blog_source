@@ -9,14 +9,14 @@ module.exports = {
     ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: '个人技术博客,后端,后端开发,技术文档,学习,面试,程序语言,编译器,go,c++,alolang,git,github,markdown'}],
     ['meta', { name: 'theme-color', content: '#11a8cd'}], // 移动浏览器主题颜色
-    ['meta', { name: "baidu-site-verification", content: "code-RQXBsNYt4g"},'/'],
-    ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-DRRYLMDHK1",async: true}],
+    ['meta', { name: "baidu-site-verification", content: "code-qbIPUATiEr"},'/'],
+    ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-J5G7BLH0FZ",async: true}],
     ['script', {},
                 " window.dataLayer = window.dataLayer || [];\
                 function gtag(){dataLayer.push(arguments);}\
                 gtag('js', new Date());\
-                gtag('config', 'G-DRRYLMDHK1');"],
-    ['script', { "crossorigin": "anonymous", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true}],
+                gtag('config', 'G-J5G7BLH0FZ');"],
+    // ['script', { "crossorigin": "anonymous", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true}],
     ['script', {}, `setInterval(function () {
       let url = "/cdn-cgi/info";
       fetch(url)
@@ -225,7 +225,7 @@ module.exports = {
     [
       'sitemap',
       {
-        hostname: 'https://blog.tsinghuamakerxian.cn'
+        hostname: 'https://blog.naivetomcat.cn'
       }
     ],
     [
@@ -238,7 +238,7 @@ module.exports = {
     [
       'feed',
       {
-        canonical_base: 'https://blog.tsinghuamakerxian.cn',
+        canonical_base: 'https://blog.naivetomcat.cn',
       }
     ]
   ]

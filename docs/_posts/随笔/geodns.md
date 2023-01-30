@@ -140,3 +140,23 @@ PowerDNS的GeoIP后端同样提供了基于客户端地理位置进行条件判�
 ``` bind
 test    60      LUA     TXT ";if(country('CN')) then return 'CN' else return 'IDK' end"
 ```
+
+#### 基于地理距离优选IP
+
+PowerDNS的GeoIP后端也提供了基于客户端IP和候选IP距离返回最优结果的函数`pickclosest()`。该函数接受一个数组，返回与`bestwho`在地理位置上最接近的地址。
+
+同时，PowerDNS也提供了`ifportup(portnum, addresses[, options])`函数。该函数接受需测试的端口、候选IP地址数组和可选的参数。可选参数中可指定选择器，如`pickclosest`。如果指定了选择器，`ifportup`将返回选择器返回的结果，否则返回随机一个可用的IP地址。
+
+该配置也可结合上述的客户端位置判断特性，实现基于地理位置的负载均衡。下面即为一个简单的配置案例
+
+``` bind
+blog.naivetomcat        60      LUA     A ";if country('CN') then return 'ip1' else return ifportup(443, {'ip2', 'ip3', 'ip4'}, {selector='pickclosest'}) end"
+blog.naivetomcat        60      LUA     AAAA "if country('CN') return 'ip61' else return ifportup(443, {'ip62', 'ip63', 'ip64'}, {selector='pickclosest'}) end"
+```
+
+## 参考资料
+
+更多资料以及PowerDNS Lua Record参考可以在PowerDNS的官方文档中找到。
+
+  * [PowerDNS官方文档](https://doc.powerdns.com)
+  * [PowerDNS Lua Record参考](https://doc.powerdns.com/authoritative/lua-records/index.html)
