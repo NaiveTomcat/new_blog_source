@@ -8,7 +8,7 @@ article: false
 ```yaml
 - name: Pixia的小天地
   desc: Pixia的小天地，平时就分享一些自己的想法~
-  link: https://blogs.pixia1234.live/
+  link: https://blogs.pixia.tech/
   avatar: https://blogs.pixia1234.live/images/avatar.jpg
   bgColor: "#69D6DF"
   textColor: "#102030"
