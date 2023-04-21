@@ -32,6 +32,9 @@ module.exports = {
     //             '(adsbygoogle = window.adsbygoogle || []).push({\
     //             google_ad_client: "ca-pub-000000000000",\
     //             enable_page_level_ads: true});'],
+    // <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911"
+    //  crossorigin="anonymous"></script>
+    ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true, crossorigin: "anonymous"}],
   ],
   markdown: {
     lineNumbers: true // 代码行号
