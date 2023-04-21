@@ -60,7 +60,7 @@ SilverFast SE 9支持多种文件保存格式。对于去色罩处理过的图�
 
 下图为Portra 160的曝光特性曲线。可以看到在双对数坐标下，三个颜色通道的曲线有很长一段线性段，且其截距和斜率都不相同。因此我们可以通过对数域下的线性的曲线操作对三个通道的曲线分别进行平移和旋转，从而达到去除色罩的效果。这一步可以通过Photoshop的曲线工具采用最大化每通道的对比度的自动方式进行处理。
 
-[Portra 160 Characteristic Curve](/img/portra160cc.png)
+![Portra 160 Characteristic Curve](/img/portra160cc.png)
 
 #### 转回线性域后的ACR自动处理
 
