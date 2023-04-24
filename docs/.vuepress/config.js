@@ -20,10 +20,27 @@ module.exports = {
     ['script', {}, `setInterval(function () {
       let url = "/cdn-cgi/info";
       fetch(url)
-      .then(res => res.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        } else if(response.status === 404) {
+          return Promise.reject('error 404')
+      })
       .then(function (data) {
           document.getElementById("cdninfo").innerHTML = data.node;
-      });
+      })
+      .catch(function (error) {
+        let cf = "/cdn-cgi/trace";
+        fetch(cf)
+        .then(res => res.text() ).then(t => {
+          var data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
+          data = '{"' + data.slice(0, data.lastIndexOf('","')) + '"}';
+          return JSON.parse(data);
+        })
+        .then(function (data) {
+          document.getElementById("cdninfo").innerHTML = "CloudFlare "+data.colo;
+        })
+      };
   }, 1000);
   console.log("CDN Helper Loaded");`],
     
