@@ -22,10 +22,10 @@ module.exports = {
       fetch(url)
       .then(response => {
         if (response.ok) {
-          return response.json()
+          return response.json();
         } else if(response.status === 404) {
-          return Promise.reject('error 404')
-      })
+          return Promise.reject('error 404');
+      }})
       .then(function (data) {
           document.getElementById("cdninfo").innerHTML = data.node;
       })
@@ -33,15 +33,15 @@ module.exports = {
         let cf = "/cdn-cgi/trace";
         fetch(cf)
         .then(res => res.text() ).then(t => {
-          var data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
+          var data = t.replace(/[\\r\\n]+/g, '","').replace(/=+/g, '":"');
           data = '{"' + data.slice(0, data.lastIndexOf('","')) + '"}';
           return JSON.parse(data);
         })
         .then(function (data) {
           document.getElementById("cdninfo").innerHTML = "CloudFlare "+data.colo;
-        })
-      };
-  }, 1000);
+        })})
+      }
+  , 1000);
   console.log("CDN Helper Loaded");`],
     
     //  ['script', { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" ,async: true}],
