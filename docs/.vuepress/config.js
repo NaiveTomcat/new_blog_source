@@ -18,7 +18,7 @@ module.exports = {
                 gtag('config', 'G-J5G7BLH0FZ');"],
     // ['script', { "crossorigin": "anonymous", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2005126511162911" ,async: true}],
     ['script', {}, `setInterval(function () {
-      let url = "/cdn-cgi/info";
+      let url = "/cdn-cgi-1/info";
       fetch(url)
       .then(response => {
         if (response.ok) {
@@ -29,7 +29,7 @@ module.exports = {
       .then(function (data) {
           document.getElementById("cdninfo").innerHTML = data.node;
       })
-      .catch(function (error) {
+      .then(function (){
         let cf = "/cdn-cgi/trace";
         fetch(cf)
         .then(res => res.text() ).then(t => {
@@ -38,7 +38,7 @@ module.exports = {
           return JSON.parse(data);
         })
         .then(function (data) {
-          document.getElementById("cdninfo").innerHTML = "CloudFlare "+data.colo;
+          document.getElementById("cfinfo").innerHTML = "CloudFlare "+data.colo;
         })})
       }
   , 1000);
@@ -139,7 +139,7 @@ module.exports = {
     },
     footer:{ // 页脚信息
       createYear: 2021, // 博客创建年份
-      copyrightInfo: 'NaiveTomcat | <a href="https://beian.miit.gov.cn" target="_blank">陕ICP备20002453号-1</a> | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a> | 命中CDN节点<span id="cdninfo"></span>', // 博客版权信息，支持a标签
+      copyrightInfo: 'NaiveTomcat | <a href="https://beian.miit.gov.cn" target="_blank">陕ICP备20002453号-1</a> | <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20212004" target="_blank"> 20212004号</a> | 命中<span id="cfinfo"></span>节点，使用后端节点<span id="cdninfo"></span>', // 博客版权信息，支持a标签
     },
     htmlModules: {
       sidebarB: `
@@ -261,5 +261,12 @@ module.exports = {
         canonical_base: 'https://blog.naivetomcat.cn',
       }
     ]
-  ]
+  ],
+  devServer: {
+    proxy: {
+      '/cdn-cgi/': {
+        target: 'http://1.1.1.1',
+      }
+    }
+  }
 }
