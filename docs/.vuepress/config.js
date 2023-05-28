@@ -251,7 +251,7 @@ module.exports = {
     [
       'vuepress-plugin-md-enhance',
       {
-        mermaid: true,
+        // mermaid: true,
         footnote: true,
       }
     ],
